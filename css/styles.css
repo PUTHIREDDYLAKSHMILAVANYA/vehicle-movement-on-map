@@ -1,0 +1,49 @@
+/* Layout + Responsive */
+* { box-sizing: border-box; }
+body, html, #app { height: 100%; margin: 0; font-family: system-ui, sans-serif; }
+
+header { padding: 12px 16px; background: #0b5cff; color: white; }
+header h1 { margin: 0; font-size: 18px; }
+
+main { display: flex; height: calc(100% - 120px); gap: 12px; padding: 12px; }
+#map { flex: 1 1 70%; border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+
+.controls {
+  width: 320px;
+  max-width: 40%;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+.controls .buttons { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+.controls button { padding: 8px 12px; border: none; background: #0b5cff; color: white; border-radius: 6px; cursor: pointer; }
+.controls input[type=range] { width: 140px; }
+.controls .meta div { margin-bottom: 8px; }
+
+footer { padding: 8px 16px; font-size: 12px; color: #555; }
+
+@media (max-width: 800px) {
+  main { flex-direction: column; }
+  .controls { width: 100%; }
+}
+
+#map {
+  width: 100%;
+  height: 500px; /* ✅ Explicit height for Leaflet */
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+}
+

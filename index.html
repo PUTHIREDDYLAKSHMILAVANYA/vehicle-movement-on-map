@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Movement on Map — Demo</title>
+
+    <!-- ✅ Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- ✅ Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- ✅ Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- ✅ Custom JS -->
+
+
+
+
+<script src="./js/app.js" defer></script>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Vehicle Movement on Map — Demo</h1>
+    </header>
+
+    <main>
+      <div id="map"></div>
+
+      <aside class="controls">
+        <button id="playPauseBtn">Play</button>
+        <label for="speedRange">Speed ×</label>
+        <input type="range" id="speedRange" min="0.5" max="3" value="1" step="0.5" />
+
+        <div class="info">
+          <p><strong>Coordinates:</strong> <span id="coords">-</span></p>
+          <p><strong>Timestamp:</strong> <span id="timestamp">-</span></p>
+          <p><strong>Elapsed:</strong> <span id="elapsed">0s</span></p>
+          <p><strong>Speed:</strong> <span id="speed">-</span></p>
+          <p class="small">Data fetched from <code>data/dummy-route.json</code></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>
+        Frontend-only demo • Use this repo to deploy on GitHub Pages / Netlify
+      </small>
+    </footer>
+  </body>
+</html>
